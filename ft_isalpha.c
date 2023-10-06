@@ -6,25 +6,27 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 12:16:17 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/06 12:51:43 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/06 14:51:00 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdio.h>
 
 int	ft_isalpha(char car)
 {
-	if ((car >= 101 && car <= 132) || (car >= 141 && car <= 172))
+	if ((car >= 65 && car <= 90) || (car >= 97 && car <= 122))
 		return (1);
 	return (0);
 }
 
-int	main(int argc, char **argv)
-{
-	if (argc > 1)
-		return (0);
-	if (ft_isalpha (argv[1][1]))
-		printf("Es Alpha");
-	if (!ft_isalpha (argv[1][1]))
-		printf("No es Alpha");
-}
+// int	main(int argc, char **argv)
+// {
+// 	if (!(argc == 2))
+// 		return (0);
+// 	printf ("Estas checando la letra %c%c", argv[1][0], '\n');
+// 	if (ft_isalpha (argv[1][0]))
+// 		printf("Es Alpha");
+// 	if (!ft_isalpha (argv[1][0]))
+// 		printf("No es Alpha");
+// 	return (0);
+// }
