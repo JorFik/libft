@@ -6,13 +6,13 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 20:23:00 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/06 20:47:08 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/06 21:03:45 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_bzero(void *address, int size)
+void	ft_bzero(void *address, size_t size)
 {
 	if (size <= 0)
 		return ;
@@ -29,7 +29,7 @@ void	ft_bzero(void *address, int size)
 // 	char str[50] = "GeeksForGeeks is for programming geeks.";
 
 // 	printf("Before memset():	%s\n", str);
-// 	ft_bzero(str, 1);
+// 	ft_bzero(str + 13, 1);
 // 	printf("After memset():		%s", str);
 // 	return (0);
 // }
