@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:36:20 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/06 20:30:19 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/06 20:32:02 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	*ft_memset(void *address, unsigned char filler, int size)
 // int	main(void)
 // {
 // 	char str[50] = "GeeksForGeeks is for programming geeks.";
+
 // 	printf("Before memset(): %s\n", str);
 // 	ft_memset(str + 13, '.', 8 * sizeof(unsigned char));
 // 	printf("After memset():  %s", str);
