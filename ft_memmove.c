@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 21:45:59 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/06 22:02:19 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/07 20:08:03 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,52 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int				i;
-	unsigned char	*temp;
+	int	i;
 
 	i = 0;
-	while (len > 0)
+	if (src > dst)
 	{
-		if (*(unsigned char *)(src + i) != '\0')
-			*(unsigned char *)(dest + i) = *(unsigned char *)(src + i);
-		else
+		while (len --)
 		{
-			*(unsigned char *)(dest + i) = '\0';
-			return (dest);
+			*(char *)(dest + i) = *(char *)(src + i);
+			i ++;
 		}
-		len --;
-		i ++;
+	}
+	else if (src < dst)
+	{
+		while (len --)
+		{
+			*(char *)(dest + len - 1) = *(char *)(src + len - 1);
+		}
 	}
 	return (dst);
 }
+
+// int	main(void)
+// {
+// 	char	str[100] = "Learningisfun";
+// 	char	*first, *second;
+
+// 	first = str;
+// 	second = str;
+// 	printf("Original string :%s\n ", str);
+// 	ft_memcpy(first + 8, first, 10);
+// 	printf("memcpy overlap : %s\n ", str);
+// 	ft_memmove(second + 8, first, 10);
+// 	printf("memmove overlap : %s\n ", str);
+// 	return (0);
+// }
+
+// int	main(void)
+// {
+// 	char str1[17] = "abcdef";
+// 	char str2[17] = "abcdef";
+
+// 	printf("The string: %s\n", str1);
+// 	memcpy((str1 + 6), str1, 10);
+// 	printf("New string: %s\n", str1);
+
+// 	printf("The string: %s\n", str2);
+// 	memmove((str1 + 6), str2, 10);
+// 	printf("New string: %s\n", str2);
+// }
