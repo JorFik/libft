@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 21:45:59 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/07 20:08:03 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/07 21:55:16 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (len --)
 		{
-			*(char *)(dest + i) = *(char *)(src + i);
+			*(char *)(dst + i) = *(char *)(src + i);
 			i ++;
 		}
 	}
@@ -29,7 +29,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (len --)
 		{
-			*(char *)(dest + len - 1) = *(char *)(src + len - 1);
+			*(char *)(dst + len - 1) = *(char *)(src + len - 1);
 		}
 	}
 	return (dst);
