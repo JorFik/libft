@@ -6,13 +6,13 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 20:49:04 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/07 20:25:12 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/08 17:18:00 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t size)
+void	*ft_memcpy(void *dest, const void *src, unsigned long size)
 {
 	int	i;
 

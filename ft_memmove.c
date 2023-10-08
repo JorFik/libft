@@ -6,13 +6,13 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 21:45:59 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/07 21:55:16 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/08 17:50:09 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, unsigned long len)
 {
 	int	i;
 
@@ -29,7 +29,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (len --)
 		{
-			*(char *)(dst + len - 1) = *(char *)(src + len - 1);
+			*(char *)(dst + len) = *(char *)(src + len);
 		}
 	}
 	return (dst);

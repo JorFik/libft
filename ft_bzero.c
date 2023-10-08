@@ -6,13 +6,13 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 20:23:00 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/06 21:03:45 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/08 17:19:48 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_bzero(void *address, size_t size)
+void	ft_bzero(void *address, unsigned long size)
 {
 	if (size <= 0)
 		return ;
