@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 22:47:39 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/08 17:25:51 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/08 20:19:57 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ int				ft_isalpha(char car);
 int				ft_isalnum(unsigned char car);
 unsigned long	ft_strlen(const char *str);
 unsigned long	ft_strlcpy(char *dst, const char *src, unsigned long dst_size);
+unsigned long	ft_strlcat(char *dst, const char *src, unsigned long dst_size);
 #endif
