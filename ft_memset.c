@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:36:20 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/08 17:17:31 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/08 19:42:47 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memset(void *address, int filler, unsigned long size)
 {
 	if (size <= 0)
-		return (0);
+		return (address);
 	else
 	{
 		*(unsigned char *)address = filler;

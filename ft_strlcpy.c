@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 15:36:55 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/08 16:48:25 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/08 19:40:57 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,15 @@ unsigned long	ft_strlcpy(char *dst, const char *src, unsigned long dst_size)
 		src_size ++;
 	if (dst_size <= 0)
 		return (src_size);
-	while (dst_size -- && *src)
+	while (dst_size && src[counter])
 	{
 		if (dst_size == 1)
-			dst[counter] = '\0';
-		if (dst_size == 1)
-			return (src_size);
+			break ;
 		else
-		{
 			dst[counter] = src[counter];
-			counter ++;
-		}
+		counter ++;
+		dst_size --;
 	}
+	dst[counter] = '\0';
 	return (src_size);
 }
