@@ -6,31 +6,31 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:40:16 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/06 15:46:51 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/09 13:31:49 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_isdigit(unsigned char car)
+int	ft_isdigit1(int car)
 {
 	if (car >= 48 && car <= 57)
 		return (1);
 	return (0);
 }
 
-int	ft_isalpha(unsigned char car)
+int	ft_isalpha1(int car)
 {
 	if ((car >= 65 && car <= 90) || (car >= 97 && car <= 122))
 		return (1);
 	return (0);
 }
 
-int	ft_isalnum(unsigned char car)
+int	ft_isalnum(int car)
 {
-	if (ft_isalpha(car))
+	if (ft_isalpha1(car))
 		return (1);
-	if (ft_isdigit(car))
+	if (ft_isdigit1(car))
 		return (2);
 	return (0);
 }

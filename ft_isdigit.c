@@ -6,13 +6,13 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:29:43 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/06 15:35:50 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/09 13:31:01 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_isdigit(unsigned char car)
+int	ft_isdigit(int car)
 {
 	if (car >= 48 && car <= 57)
 		return (1);

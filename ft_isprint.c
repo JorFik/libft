@@ -6,13 +6,13 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:03:04 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/06 16:27:48 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/09 13:33:32 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_isprint(unsigned char car)
+int	ft_isprint(int car)
 {
 	if (car >= 32 && car <= 126)
 		return (1);

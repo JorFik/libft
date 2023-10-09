@@ -6,11 +6,11 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:46:00 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/08 21:44:19 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/09 13:23:43 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned long	ft_strlen(const char *str)
+unsigned long	ft_strlen1(const char *str)
 {
 	int	counter;
 
@@ -20,12 +20,12 @@ unsigned long	ft_strlen(const char *str)
 	return (counter);
 }
 
-unsigned long	ft_strlcpy(char *dst, const char *src, unsigned long dst_size)
+unsigned long	ft_strlcpy1(char *dst, const char *src, unsigned long dst_size)
 {
 	unsigned long	src_size;
 	int				counter;
 
-	src_size = ft_strlen(src);
+	src_size = ft_strlen1(src);
 	counter = 0;
 	if (dst_size <= 0)
 		return (src_size);
@@ -47,11 +47,11 @@ unsigned long	ft_strlcat(char *dst, const char *src, unsigned long dst_size)
 	unsigned long	src_size;
 	unsigned long	counter;
 
-	counter = ft_strlen(dst);
-	src_size = ft_strlen(src);
+	counter = ft_strlen1(dst);
+	src_size = ft_strlen1(src);
 	if (dst_size < counter)
 		return (src_size + dst_size);
-	ft_strlcpy(&dst[counter], src, dst_size - counter);
+	ft_strlcpy1(&dst[counter], src, dst_size - counter);
 	return (counter + src_size);
 }
 
