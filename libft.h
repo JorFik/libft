@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 22:47:39 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/09 14:15:06 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/09 16:06:56 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void			*ft_memset(void *address, int filler, unsigned long size);
 void			*ft_memmove(void *dst, const void *src, unsigned long len);
 void			*ft_memcpy(void *dest, const void *src, unsigned long size);
 char			*ft_strchr(char *src, int c);
+char			*ft_strrchr(char *src, int c);
 int				ft_toupper(int c);
 int				ft_isprint(int car);
 int				ft_isdigit(int car);
