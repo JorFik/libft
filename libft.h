@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 22:47:39 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/09 20:36:05 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/09 23:22:27 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void			ft_bzero(void *address, unsigned long size);
 void			*ft_memset(void *address, int filler, unsigned long size);
 void			*ft_memmove(void *dst, const void *src, unsigned long len);
 void			*ft_memcpy(void *dest, const void *src, unsigned long size);
+void			*memchr(void *s, int c, unsigned long n);
 char			*ft_strchr(char *src, int c);
 char			*ft_strrchr(char *src, int c);
 int				ft_toupper(int c);
