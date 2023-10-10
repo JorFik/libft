@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 22:47:39 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/09 23:37:27 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/09 23:52:18 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void			*ft_memcpy(void *dest, const void *src, unsigned long size);
 void			*memchr(void *s, int c, unsigned long n);
 char			*ft_strchr(char *src, int c);
 char			*ft_strrchr(char *src, int c);
+char			*ft_strnstr(const char *haystack,
+					const char *needle, unsigned long len);
 int				ft_memcmp(const void *s1, const void *s2, unsigned long n);
 int				ft_toupper(int c);
 int				ft_isprint(int car);
