@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:35:49 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/09 16:08:32 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/11 13:24:37 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char	*ft_strrchr(char *src, int c)
 	i = ft_strle(src);
 	while ((i >= 0) && src[i] != busco)
 		i --;
+	if (i < 0)
+		return (0);
 	if (src[i] == busco)
 		return (&src[i]);
 	else
