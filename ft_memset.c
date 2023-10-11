@@ -6,22 +6,25 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:36:20 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/08 19:42:47 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/11 14:45:39 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memset(void *address, int filler, unsigned long size)
+void	*ft_memset(void *address, int c, unsigned long size)
 {
-	if (size <= 0)
-		return (address);
-	else
+	unsigned long	i;
+	unsigned char	filler;
+
+	i = 0;
+	filler = (unsigned char) c;
+	while (size > i)
 	{
-		*(unsigned char *)address = filler;
-		ft_memset(address + 1, filler, size - 1);
-		return (address);
+		((unsigned char *) address)[i] = filler;
+		i ++;
 	}
+	return (address);
 }
 
 // int	main(void)
