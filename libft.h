@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 22:47:39 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/12 11:16:31 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/12 15:28:29 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void			*ft_calloc(unsigned long count, unsigned long size);
 char			*ft_strchr(char *src, int c);
 char			*ft_strrchr(char *src, int c);
 char			*ft_strdup(const char *s1);
+char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strnstr(const char *haystack, const char *needle,
 					unsigned long len);
 char			*ft_substr(char const *s, unsigned int start,
