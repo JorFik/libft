@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 22:47:39 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/12 20:49:27 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/12 21:38:28 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char			*ft_strnstr(const char *haystack, const char *needle,
 					unsigned long len);
 char			*ft_substr(char const *s, unsigned int start,
 					unsigned long len);
+char			**ft_split(char const *s, char c);
 int				ft_atoi(const char *str);
 int				ft_toupper(int c);
 int				ft_isprint(int car);
