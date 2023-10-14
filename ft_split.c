@@ -6,70 +6,65 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 21:37:17 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/14 01:00:09 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/14 18:44:16 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned long	ft_charcount(char const *s, char c)
+unsigned long	ft_wcount(char *s, char c)
 {
-	unsigned long	appearences;
-	char			*new_p;
+	unsigned long	counter;
 
-	appearences = 0;
-	if (*s)
+	counter = 0;
+	while (*s == c && *s)
+		s ++;
+	while (*s)
 	{
-		new_p = ft_strchr((char *)s, c);
-		while (new_p)
-		{
-			appearences ++;
-			while (*new_p == c && *new_p)
-				new_p ++;
-			if (*new_p == '\0')
-				return (appearences);
-			new_p = ft_strchr(new_p, c);
-		}
+		while (*s == c && *s)
+			s ++;
+		while (*s != c && *s)
+			s ++;
+		counter ++;
+		while (*s == c && *s)
+			s ++;
 	}
-	return (appearences ++);
+	return (counter);
 }
 
-// num_str + 1 porque si 5 char then 6 str
-char	**ft_split(char const *s, char c)
+int	ft_protect_malloc(char **pop, unsigned long i)
 {
-	unsigned long	num_str;
+	if (!pop[i])
+	{
+		while (i--)
+			free(pop[i]);
+		free(pop);
+		return (0);
+	}
+	return (1);
+}
+
+char	**ft_split(char *s, char c)
+{
+	char			**pop;
+	unsigned long	wcount;
 	unsigned long	i;
-	unsigned long	size;
-	char			**p_d_p;
-	char			*u_p;
 
 	i = 0;
-	u_p = (char *) s;
-	num_str = ft_charcount(u_p, c) + 1;
-	p_d_p = ft_calloc(num_str + 1, sizeof(char *));
-	if (!p_d_p)
-		return ((void *)0);
-	while (num_str && *u_p)
+	wcount = ft_wcount(s, c);
+	pop = ft_calloc(wcount + 1, sizeof(char *));
+	if (!pop)
+		return (0);
+	while (*s && wcount > i)
 	{
-		size = 0;
-		while (*u_p == c && *u_p)
-			u_p ++;
-		while (u_p[size] != c && u_p[size])
-			size ++;
-		p_d_p[i] = ft_calloc((size + 1), sizeof(char));
-		if (!p_d_p[i])
-			free(p_d_p);
-		if (!p_d_p[i])
+		while (*s == c && *s)
+			s++;
+		pop[i] = ft_substr(s, 0, (unsigned long)(ft_strchr(s, c) - s));
+		if (!ft_protect_malloc(pop, i))
 			return (0);
-		ft_strlcpy(p_d_p[i], u_p, size + 1);
-		u_p += size;
-		while (*u_p == c && *u_p)
-			u_p ++;
+		while (*s != c && *s)
+			s ++;
 		i ++;
-		num_str--;
 	}
-	return (p_d_p);
+	return (pop);
 }
-
-	// if (num_str == 1 && u_p[1] == c)
-	// 	return (p_d_p);
