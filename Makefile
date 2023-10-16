@@ -5,6 +5,7 @@ CCFLAGS = -Wall -Wextra -Werror
 ADD = -fsanitize=address
 NAME = libft.a
 OBJ = $(ft_so_far:.c=.o)
+OBJ+ = $(ft_so_far:.c=.o) $(ft_bonus:.c=.o)
 
 ft_so_far = ft_bzero.c ft_strlen.c ft_memset.c ft_memmove.c \
 ft_memcpy.c ft_isprint.c ft_isdigit.c ft_isascii.c ft_isalpha.c\
@@ -15,11 +16,14 @@ ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c\
 ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
 ft_putnbr_fd.c
 
+ft_bonus = 
+
 h_file = libft.h
 
 .PHONY: clean fclean re all
 
 all: $(NAME)
+
 $(NAME) : $(OBJ) $(h_file)
 	@$(LIB) $(NAME) $(OBJ)
 
@@ -32,6 +36,9 @@ fclean: clean
 	@$(RM) $(NAME)
 
 re: fclean all
+
+# bonus: $(OBJ+) $(h_file)
+# 	@$(LIB)
 
 %: %.c 
 	@$(CC) $(CCFLAGS) $(ADD) $(h_file) $(ft_so_far)

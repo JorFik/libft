@@ -6,13 +6,19 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 22:47:39 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/16 13:35:27 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/16 16:15:44 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 void			ft_bzero(void *address, unsigned long size);
 void			*ft_memset(void *address, int filler, unsigned long size);
