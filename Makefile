@@ -29,6 +29,7 @@ $(NAME) : $(OBJ) $(h_file)
 
 %.o : %.c
 	@$(CC) $(CCFLAGS) -c -o $@ $<
+
 clean:
 	@$(RM) $(OBJ)
 
@@ -37,8 +38,8 @@ fclean: clean
 
 re: fclean all
 
-# bonus: $(OBJ+) $(h_file)
-# 	@$(LIB)
+bonus: $(OBJ+) $(OBJ) $(h_file)
+	@$(LIB) $(NAME) $^
 
 %: %.c 
 	@$(CC) $(CCFLAGS) $(ADD) $(h_file) $(ft_so_far)
