@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 22:47:39 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/14 18:55:19 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/16 12:22:55 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ char			*ft_strrchr(char *src, int c);
 char			*ft_strdup(const char *s1);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strnstr(const char *haystack, const char *needle,
 					unsigned long len);
 char			*ft_substr(char const *s, unsigned int start,
