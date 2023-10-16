@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 21:45:59 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/08 17:50:09 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/16 22:15:51 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ void	*ft_memmove(void *dst, const void *src, unsigned long len)
 	else if (src < dst)
 	{
 		while (len --)
-		{
 			*(char *)(dst + len) = *(char *)(src + len);
-		}
 	}
 	return (dst);
 }

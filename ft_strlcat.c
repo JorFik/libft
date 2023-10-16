@@ -6,52 +6,22 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:46:00 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/09 13:23:43 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/16 22:21:14 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned long	ft_strlen1(const char *str)
-{
-	int	counter;
-
-	counter = 0;
-	while (*(str + counter) != '\0')
-		counter ++;
-	return (counter);
-}
-
-unsigned long	ft_strlcpy1(char *dst, const char *src, unsigned long dst_size)
-{
-	unsigned long	src_size;
-	int				counter;
-
-	src_size = ft_strlen1(src);
-	counter = 0;
-	if (dst_size <= 0)
-		return (src_size);
-	while (dst_size && src[counter])
-	{
-		if (dst_size == 1)
-			break ;
-		else
-			dst[counter] = src[counter];
-		counter ++;
-		dst_size --;
-	}
-	dst[counter] = '\0';
-	return (src_size);
-}
+#include "libft.h"
 
 unsigned long	ft_strlcat(char *dst, const char *src, unsigned long dst_size)
 {
 	unsigned long	src_size;
 	unsigned long	counter;
 
-	counter = ft_strlen1(dst);
-	src_size = ft_strlen1(src);
+	counter = ft_strlen(dst);
+	src_size = ft_strlen(src);
 	if (dst_size < counter)
 		return (src_size + dst_size);
-	ft_strlcpy1(&dst[counter], src, dst_size - counter);
+	ft_strlcpy(&dst[counter], src, dst_size - counter);
 	return (counter + src_size);
 }
 

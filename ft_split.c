@@ -6,13 +6,13 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 21:37:17 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/14 18:44:16 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/16 22:16:44 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned long	ft_wcount(char *s, char c)
+static unsigned long	ft_wcount(char *s, char c)
 {
 	unsigned long	counter;
 
@@ -32,7 +32,7 @@ unsigned long	ft_wcount(char *s, char c)
 	return (counter);
 }
 
-int	ft_protect_malloc(char **pop, unsigned long i)
+static int	ft_protect_malloc(char **pop, unsigned long i)
 {
 	if (!pop[i])
 	{

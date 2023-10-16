@@ -6,31 +6,18 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:40:16 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/09 13:31:49 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/16 22:14:59 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-
-int	ft_isdigit1(int car)
-{
-	if (car >= 48 && car <= 57)
-		return (1);
-	return (0);
-}
-
-int	ft_isalpha1(int car)
-{
-	if ((car >= 65 && car <= 90) || (car >= 97 && car <= 122))
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 int	ft_isalnum(int car)
 {
-	if (ft_isalpha1(car))
+	if (ft_isalpha(car))
 		return (1);
-	if (ft_isdigit1(car))
+	if (ft_isdigit(car))
 		return (2);
 	return (0);
 }

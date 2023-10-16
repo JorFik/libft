@@ -6,25 +6,25 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:48:16 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/10 20:18:29 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/16 21:57:32 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_jmpspc(char *s)
+static char	*ft_jmpspc(char *s)
 {
 	while ((*s == ' ' || (*s >= 9 && *s <= 13)) && *s)
 		s++;
 	return (s);
 }
 
-char	*ft_jmpsign(char *s)
+static char	*ft_jmpsign(char *s)
 {
 	if ((*s == '-' || *s == '+') && *s)
 		s ++;
 	return (s);
 }
 
-int	ft_sign(char *s)
+static int	ft_sign(char *s)
 {
 	int	counter;
 
