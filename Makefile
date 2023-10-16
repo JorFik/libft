@@ -34,5 +34,5 @@ re: fclean all
 %: %.c 
 	@$(CC) $(CCFLAGS) $(ADD) $^
 
-c:
-	@$(RM) $@.out
+c: a.out
+	@$(RM) $^
