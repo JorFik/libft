@@ -6,13 +6,13 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 18:54:13 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/16 12:15:57 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/16 21:26:36 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_a_init(long n)
+static char	*ft_a_init(long n)
 {
 	char	*a;
 	double	w_i;
@@ -29,6 +29,8 @@ char	*ft_a_init(long n)
 		w_i /= 10.0;
 		count++;
 	}
+	if (!n)
+		count = 1;
 	a = ft_calloc(count + 1, sizeof(char));
 	if (!a)
 		return (0);
@@ -37,7 +39,7 @@ char	*ft_a_init(long n)
 	return (a);
 }
 
-long	ft_i_init(long n)
+static long	ft_i_init(long n)
 {
 	double	w_i;
 	int		count;
@@ -53,6 +55,8 @@ long	ft_i_init(long n)
 		w_i /= 10.0;
 		count++;
 	}
+	if (!n)
+		count = 1;
 	return (count);
 }
 
@@ -63,12 +67,6 @@ char	*ft_itoa(int n)
 	long	i;
 
 	w_i = (double) n;
-	if (!n)
-	{
-		a = ft_calloc(2, sizeof(char));
-		a[0] = '0';
-		return (a);
-	}
 	a = ft_a_init(n);
 	if (!a)
 		return (0);
@@ -81,6 +79,8 @@ char	*ft_itoa(int n)
 		w_i /= 10.0;
 		i --;
 	}
+	if (!n)
+		a[0] = '0';
 	return (a);
 }
 
