@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 22:57:46 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/17 16:11:30 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/17 16:28:53 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,3 @@ t_list	*ft_lstnew(void *content)
 	new_node->content = content;
 	return (new_node);
 }
-	// if (content)
-	// {
-	// 	new_node->content = ft_calloc(s_content + 1, sizeof(content));
-	// 	if (!new_node->content)
-	// 		free(new_node);
-	// 	if (!new_node->content)
-	// 		return (NULL);
-	// 	ft_memcpy(new_node->content, content, s_content);
-	// }
-	// else
