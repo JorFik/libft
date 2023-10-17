@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 22:47:39 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/17 19:43:54 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/17 21:18:54 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,5 @@ int				ft_lstsize(t_list *lst);
 t_list			*ft_lstlast(t_list *lst);
 void			ft_lstadd_back(t_list **header, t_list *new);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
+void			ft_lstclear(t_list **header, void (*del) (void *));
 #endif
