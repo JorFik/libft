@@ -33,7 +33,7 @@ $(NAME) : $(OBJ) $(h_file)
 	@$(CC) $(CCFLAGS) -c -o $@ $<
 
 clean:
-	@$(RM) $(OBJ) $(OBJ+)git 
+	@$(RM) $(OBJ) $(OBJ+)
 
 fclean: clean
 	@$(RM) $(NAME)
