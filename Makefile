@@ -24,7 +24,7 @@ h_file = libft.h
 
 .PHONY: clean fclean re all
 
-all: $(NAME)
+all: $(NAME) bonus
 
 $(NAME) : $(OBJ) $(h_file)
 	@$(LIB) $(NAME) $(OBJ)
