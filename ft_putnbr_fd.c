@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:23:56 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/16 16:14:46 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/10/26 17:09:10 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,19 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	double	nbr;
-	long	count;
+	long	nbr;
 
-	count = 1;
 	nbr = (long) n;
 	if (n < 0)
 		ft_putchar_fd('-', fd);
 	if (n < 0)
 		nbr = -nbr;
-	if (n == 0)
-		ft_putchar_fd('0', fd);
-	while ((nbr / 10.0) >= (1.0 / 10.0))
-	{
-		nbr /= 10;
-		count *= 10;
-	}
-	nbr = (long) n;
-	if (n < 0)
-		nbr = -nbr;
-	while (count > 1)
-	{
-		ft_putchar_fd((((long)nbr % count) / (count / 10)) + '0', fd);
-		count /= 10;
-	}
+	if (nbr > 9)
+		ft_putnbr_fd(nbr / 10, fd);
+	if (nbr > 9)
+		ft_putnbr_fd(nbr % 10, fd);
+	else
+		ft_putchar_fd(nbr + '0', fd);
 	return ;
 }
 
