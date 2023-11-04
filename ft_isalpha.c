@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 12:16:17 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/09 13:30:14 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/11/04 15:37:00 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 int	ft_isalpha(int car)
 {
-	if ((car >= 65 && car <= 90) || (car >= 97 && car <= 122))
+	if (car >= 65 && car <= 90)
 		return (1);
+	if (car >= 97 && car <= 122)
+		return (2);
 	return (0);
 }
 
