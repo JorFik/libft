@@ -1,11 +1,10 @@
 LIB = ar rcs
 RM = rm -f
 CC = cc
-CCFLAGS = -Wall -Wextra -Werror 
+CCFLAGS = -Wall -Wextra -Werror -Ih_files
 ADD = -fsanitize=address
 NAME = libft.a
-OBJ = $(ft_so_far:.c=.o)
-OBJ+ = $(ft_so_far:.c=.o) $(ft_bonus:.c=.o)
+OBJ+ = $(ft_so_far:.c=.o)
 
 ft_so_far = ft_bzero.c ft_strlen.c ft_memset.c ft_memmove.c \
 ft_memcpy.c ft_isprint.c ft_isdigit.c ft_isascii.c ft_isalpha.c\
@@ -14,20 +13,17 @@ ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c\
 ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c\
 ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c\
 ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
-ft_putnbr_fd.c
-
-ft_bonus = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
-ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
-ft_lstmap.c
-
-h_file = libft.h
+ft_putnbr_fd.c ft_printf.c get_next_line_bonus.c get_next_line_utils_bonus.c\
+ft_cases.c ft_hex_cases.c ft_cases_bonus.c ft_lstnew.c\
+ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
+ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 .PHONY: clean fclean re all
 
-all: $(NAME) bonus
+all: $(NAME) clean
 
-$(NAME) : $(OBJ) $(h_file)
-	@$(LIB) $(NAME) $(OBJ)
+$(NAME) : $(OBJ+)
+	@$(LIB) $(NAME) $(OBJ+)
 
 %.o : %.c
 	@$(CC) $(CCFLAGS) -c -o $@ $<
@@ -40,11 +36,3 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(OBJ+) $(OBJ) $(h_file)
-	@$(LIB) $(NAME) $^
-
-%: %.c 
-	@$(CC) $(CCFLAGS) $(ADD) $(h_file) $(ft_so_far)
-
-c: a.out
-	@$(RM) $^
