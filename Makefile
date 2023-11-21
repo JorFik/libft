@@ -1,7 +1,7 @@
 LIB = ar rcs
 RM = rm -f
 CC = cc
-CCFLAGS = -Wall -Wextra -Werror -I./h_files
+CFLAGS = -Wall -Wextra -Werror -I./h_files
 ADD = -fsanitize=address
 NAME = libft.a
 OBJ+ = $(ft_so_far:.c=.o)
@@ -27,7 +27,7 @@ $(NAME) : $(OBJ+)
 	@mv $(NAME) ../
 
 %.o : %.c
-	@$(CC) $(CCFLAGS) -c -o $@ $<
+	@$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
 	@$(RM) $(OBJ) $(OBJ+)
