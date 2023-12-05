@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 22:47:39 by JFikents          #+#    #+#             */
-/*   Updated: 2023/11/18 22:09:00 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/12/05 16:42:38 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-//FIRST PART NO MALLOC
+//_FIRST PART NO MALLOC
 int				ft_isalpha(int car);
 int				ft_isdigit(int car);
 int				ft_isalnum(int car);
@@ -46,11 +46,11 @@ char			*ft_strnstr(const char *haystack, const char *needle,
 					unsigned long len);
 int				ft_atoi(const char *str);
 
-//FIRST PART WITH MALLOC
+//_FIRST PART WITH MALLOC
 void			*ft_calloc(unsigned long count, unsigned long size);
 char			*ft_strdup(const char *s1);
 
-//SECOND PART
+//_SECOND PART
 char			*ft_substr(char const *s, unsigned int start,
 					unsigned long len);
 char			*ft_strjoin(char const *s1, char const *s2);
@@ -64,7 +64,7 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 
-//BONUS
+//_BONUS
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 int				ft_lstsize(t_list *lst);
@@ -75,4 +75,7 @@ void			ft_lstclear(t_list **header, void (*del) (void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
+
+//_NEW FUNCTIONS
+void			ft_free_n_null(void **ptr);
 #endif
