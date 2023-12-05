@@ -30,15 +30,16 @@ ft_so_far += ft_free_n_null.c
 
 all: $(NAME)
 
-$(NAME) : $(OBJ+) clean
+$(NAME) : $(OBJ+)
 	@$(LIB) $(NAME) $(OBJ+)
 	@mv $(NAME) ../
+	@make clean
 
 %.o : %.c
 	@$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	@$(RM) $(OBJ) $(OBJ+)
+	@$(RM) $(OBJ+)
 
 fclean: clean
 	@$(RM) ../$(NAME)
