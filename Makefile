@@ -30,7 +30,7 @@ ft_so_far += ft_free_n_null.c
 
 all: $(NAME)
 
-$(NAME) : $(OBJ+)
+$(NAME) : $(OBJ+) clean
 	@$(LIB) $(NAME) $(OBJ+)
 	@mv $(NAME) ../
 
