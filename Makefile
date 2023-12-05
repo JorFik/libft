@@ -18,6 +18,8 @@ ft_cases.c ft_hex_cases.c ft_cases_bonus.c ft_lstnew.c\
 ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
 ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
+ft_so_far += ft_free_n_null.c
+
 .PHONY: clean fclean re all
 
 all: $(NAME) clean
