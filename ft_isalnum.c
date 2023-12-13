@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:40:16 by JFikents          #+#    #+#             */
-/*   Updated: 2023/10/16 22:14:59 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/12/12 01:12:43 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 int	ft_isalnum(int car)
 {
 	if (ft_isalpha(car))
-		return (1);
+		return (ft_isalpha(car));
 	if (ft_isdigit(car))
-		return (2);
+		return (3);
 	return (0);
 }
 

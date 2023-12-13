@@ -24,7 +24,7 @@ ft_so_far += ft_printf.c get_next_line_bonus.c get_next_line_utils_bonus.c\
 ft_cases.c ft_hex_cases.c ft_cases_bonus.c
 
 #_EXTRA FUNCTIONS
-ft_so_far += ft_free_n_null.c
+ft_so_far += ft_free_n_null.c ft_close.c
 
 .PHONY: clean fclean re all
 
@@ -32,7 +32,6 @@ all: $(NAME)
 
 $(NAME) : $(OBJ+)
 	@$(LIB) $(NAME) $(OBJ+)
-	@mv $(NAME) ../
 	@make clean
 
 %.o : %.c
@@ -42,7 +41,7 @@ clean:
 	@$(RM) $(OBJ+)
 
 fclean: clean
-	@$(RM) ../$(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 

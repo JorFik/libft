@@ -6,76 +6,61 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 22:47:39 by JFikents          #+#    #+#             */
-/*   Updated: 2023/12/05 16:42:38 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/12/13 23:16:26 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+// **----------------------------- LIBRARIES ----------------------------- **//
+
+//_STANDARD LIBRARIES (MALLOC, FREE, WRITE, READ, EXIT, ETC.)
 # include <stdlib.h>
+
+//_PRINTF
 # include "ft_printf.h"
+
+//_GET_NEXT_LINE
 # include "get_next_line_bonus.h"
 
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+//_TYPE CHECKS
+# include "libft_type_checks.h"
 
-//_FIRST PART NO MALLOC
-int				ft_isalpha(int car);
-int				ft_isdigit(int car);
-int				ft_isalnum(int car);
-int				ft_isascii(int car);
-int				ft_isprint(int car);
-unsigned long	ft_strlen(const char *str);
-void			*ft_memset(void *address, int filler, unsigned long size);
-void			ft_bzero(void *address, unsigned long size);
-void			*ft_memcpy(void *dest, const void *src, unsigned long size);
-void			*ft_memmove(void *dst, const void *src, unsigned long len);
-unsigned long	ft_strlcpy(char *dst, const char *src, unsigned long dst_size);
-unsigned long	ft_strlcat(char *dst, const char *src, unsigned long dst_size);
-int				ft_toupper(int c);
-int				ft_tolower(int c);
-char			*ft_strchr(char *src, int c);
-char			*ft_strrchr(char *src, int c);
-int				ft_strncmp(const char *s1, const char *s2, unsigned long n);
-void			*ft_memchr(void *s, int c, unsigned long n);
-int				ft_memcmp(const void *s1, const void *s2, unsigned long n);
-char			*ft_strnstr(const char *haystack, const char *needle,
-					unsigned long len);
-int				ft_atoi(const char *str);
+//_WRITE TO FILE DESCRIPTOR
+# include "libft_write_fd.h"
 
-//_FIRST PART WITH MALLOC
-void			*ft_calloc(unsigned long count, unsigned long size);
-char			*ft_strdup(const char *s1);
+//_STRING RELATED
+# include "libft_str_manipulation.h"
+# include "libft_str_checks.h"
 
-//_SECOND PART
-char			*ft_substr(char const *s, unsigned int start,
-					unsigned long len);
-char			*ft_strjoin(char const *s1, char const *s2);
-char			*ft_strtrim(char const *s1, char const *set);
-char			**ft_split(char *s, char c);
-char			*ft_itoa(int n);
-char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-void			ft_striteri(char *s, void (*f)(unsigned int, char *));
-void			ft_putchar_fd(char c, int fd);
-void			ft_putstr_fd(char *s, int fd);
-void			ft_putendl_fd(char *s, int fd);
-void			ft_putnbr_fd(int n, int fd);
+//_CHARACTER RELATED
+# include "libft_char_manipulation.h"
 
-//_BONUS
-t_list			*ft_lstnew(void *content);
-void			ft_lstadd_front(t_list **lst, t_list *new);
-int				ft_lstsize(t_list *lst);
-t_list			*ft_lstlast(t_list *lst);
-void			ft_lstadd_back(t_list **header, t_list *new);
-void			ft_lstdelone(t_list *lst, void (*del)(void *));
-void			ft_lstclear(t_list **header, void (*del) (void *));
-void			ft_lstiter(t_list *lst, void (*f)(void *));
-t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
-					void (*del)(void *));
+//_INT RELATED
+# include "libft_int_manipulation.h"
 
-//_NEW FUNCTIONS
-void			ft_free_n_null(void **ptr);
+//_MEMORY RELATED
+# include "libft_mem_manipulation.h"
+# include "libft_mem_checks.h"
+# include "libft_mem_allocation.h"
+
+//_LIST RELATED
+# include "libft_lst_manipulation.h"
+//_--------------------------------------------------------------------------_//
+
+//_DESCRIPTION
+//?		CHECKS IF FD IS VALID AND CLOSES IT
+//_RETURNS
+//?		0 IF SUCCESS
+//?		-1 IF CLOSE FAILS
+//?		1 IF FD IS NEGATIVE OR 0
+//_NOTES
+//*		SAFER THAN CLOSE()
+int				ft_close(int fd);
+//_--------------------------------------------------------------------------_//
+
 #endif
+
+// INT MANIPULATION
+// STR MANIPULATION
