@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 22:29:51 by JFikents          #+#    #+#             */
-/*   Updated: 2023/11/07 17:03:33 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/12/14 19:39:40 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	ft_printf(const char *formato, ...)
 	va_start(input, formato);
 	bytes_printed = 0;
 	i = 0;
-	while (formato[i])
+	while (formato && formato[i])
 	{
 		if (formato[i] != '%')
 			tmp = ft_printf_formato(&formato[i]);

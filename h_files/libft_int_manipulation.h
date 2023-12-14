@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 15:45:02 by JFikents          #+#    #+#             */
-/*   Updated: 2023/12/13 20:59:55 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/12/14 20:14:14 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,19 @@
 
 // **----------------------------- FUNCTIONS ----------------------------- **//
 
-//_DESCRIPTION
-//*		CONVERTS INT TO STRING
-//_RETURNS
-//?		ADDRESS		IF SUCCESSFUL
-//?		NULL		IF MALLOC FAILS
-//_WARNINGS
-//!		THE MEMORY IS ALLOCATED, REMEMBER TO FREE IT
+/**
+	@note//_DESCRIPTION
+	@brief #### TRANSFORMS AN INT TO A STRING
+	@brief Transforms an int value to its equivalent written version in 
+		characters to a new allocated string.
+	@note//_PARAMETERS
+	@param n The int value to be transformed.
+	@note//_RETURNS
+	@return The address of the new allocated string or `NULL` if the allocation
+		fails.
+	@note//_NOTES
+	@note The memory is allocated, remember to `free()` it.
+ */
 char			*ft_itoa(int n);
 
 //_--------------------------------------------------------------------------_//

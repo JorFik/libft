@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 22:47:39 by JFikents          #+#    #+#             */
-/*   Updated: 2023/12/13 23:16:26 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/12/14 21:07:24 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,17 +47,6 @@
 
 //_LIST RELATED
 # include "libft_lst_manipulation.h"
-//_--------------------------------------------------------------------------_//
-
-//_DESCRIPTION
-//?		CHECKS IF FD IS VALID AND CLOSES IT
-//_RETURNS
-//?		0 IF SUCCESS
-//?		-1 IF CLOSE FAILS
-//?		1 IF FD IS NEGATIVE OR 0
-//_NOTES
-//*		SAFER THAN CLOSE()
-int				ft_close(int fd);
 //_--------------------------------------------------------------------------_//
 
 #endif
