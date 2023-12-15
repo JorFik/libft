@@ -68,15 +68,31 @@ La biblioteca `libft` incluye las siguientes funciones (para información mas de
 
 ### Libft Str Checks
 - `ft_strchr()`: Busca la primera aparición del `carácter` dado dentro del `string`. Si lo encuentra, devuelve la dirección de ese lugar. Si no lo encuentra, devuelve `NULL`.
-- `ft_strrchr()`: Esta función es similar a `ft_strchr()`, pero comienza a buscar desde el final de la cadena `src`. Devuelve la dirección del último lugar donde aparece el `carácter` c. Si no lo encuentra, devuelve `NULL`.
+- `ft_strrchr()`: Esta función es similar a `ft_strchr()`, pero comienza a buscar desde el final del `string` `src`. Devuelve la dirección del último lugar donde aparece el `carácter` c. Si no lo encuentra, devuelve `NULL`.
 - `ft_strncmp()`: Compara las 2 cadenas dadas hasta `n` caracteres o hasta que encuentre una diferencia. Devuelve la diferencia o `0` si son iguales.
-- `ft_strnstr()`: Esta función busca la primera aparición de la cadena `needle` en la cadena `haystack`, pero no busca más allá de `len` caracteres en `haystack`. Si encuentra `needle`, devuelve la dirección del inicio de `needle`. Si no la encuentra, devuelve `NULL`.
+- `ft_strnstr()`: Esta función busca la primera aparición del `array` `needle` en el `array` `haystack`, pero no busca más allá de `len` caracteres en `haystack`. Si encuentra `needle`, devuelve la dirección del inicio de `needle`. Si no la encuentra, devuelve `NULL`.
 
 ### Libft Str Manipulation
 
+- `ft_strlen()`: Cuenta el número de caracteres en un `string`.
+- `ft_strlcpy()`: Copia un `string` de origen a un destino hasta un tamaño especificado.
+- `ft_strlcat()`: Concatena un `string` de origen al final de un `string` de destino, hasta un tamaño especificado.
+- `ft_atoi()`: Convierte un `string` a un número entero.
+- `ft_strdup()`: Crea una copia de un `string`.
+- `ft_substr()`: Extrae una subcadena de un `string` dada, desde un índice especificado y con una longitud dada.
+- `ft_strjoin()`: Une dos cadenas en un nuevo `string`.
+- `ft_strtrim()`: Crea una nueva `string` eliminando ciertos caracteres del inicio y el final de un `string` dada.
+- `ft_split()`: Divide un `string` en un array de cadenas usando un delimitador.
+- `ft_strmapi()`: Aplica una función a cada carácter de un `string` y almacena los resultados en una nueva `string`.
+- `ft_striteri()`: Aplica una función a cada carácter de un `string`.
+
+### Libft Type Checks
+
+
+### Libft Write FD
 - `ft_putchar_fd()`: Escribe un `carácter` en un descriptor de archivo dado.
-- `ft_putstr_fd()`: Escribe una cadena en un descriptor de archivo dado.
-- `ft_putendl_fd()`: Escribe una cadena seguida de una nueva línea en un descriptor de archivo dado.
+- `ft_putstr_fd()`: Escribe un `string` en un descriptor de archivo dado.
+- `ft_putendl_fd()`: Escribe un `string` seguida de una nueva línea en un descriptor de archivo dado.
 
 ## Uso
 
