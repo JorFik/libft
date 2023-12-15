@@ -2,7 +2,45 @@
 
 `libft` es una biblioteca de funciones en C re-escritas de la librería estándar, así como algunas funciones adicionales que pueden ser útiles para los proyectos en C.
 
-`libft` es el primer proyecto en el Core-Curriculum dentro de la escuela de programación "42", esta es mi interpretacion de la asignación con algunas funciones extras que ire agregando conforme sean necesarias.
+`libft` es el primer proyecto en el Core-Curriculum dentro de la escuela de programación "42", esta es mi interpretación de la asignación con algunas funciones extras que ire agregando conforme sean necesarias.
+
+## Uso
+
+Para usar `libft`, descarga la biblioteca en la raiz de tu proyecto usando la siguiente linea de comandos
+
+#### SSH
+```bash
+git clone git@github.com:JorFik/libft.git
+```
+#### HTTPS
+```bash
+git clone https://github.com/JorFik/libft.git
+```
+### GitHub CLI
+```bash
+gh repo clone JorFik/libft
+```
+Esto creara un directorio llamado `libft/`, entra con el comando
+
+```bash
+cd libft
+```
+Una vez dentro crea la libreria estatica `libft.a` con el siguiente comando
+
+```bash
+make
+```
+`libft.a` se encontrara en la raiz de tu proyecto, ahora solo necesitas compilar tu proyecto incluyendo `libft.a` y agregando los `header files` que contengan las funciones que quieras usar, todas los `header files` estan dentro de `libft/h_files`
+
+### Ejemplo de como incluir todas las funciones:
+
+```c
+#include "libft/h_files/libft.h"
+```
+
+Para mas información sobre las funciones, ver directamente en el `header file` correspondiente o para una descripción rápida leer la sección **Funciones** a continuación.
+
+Para encontrar el `header file` apropiado ver en **Categorías** a continuación.
 
 ## Categorías
 
@@ -27,7 +65,7 @@ Hay 3 `header files` adicionales a los previamente descritos que no son una cate
 
 ## Funciones
 
-La biblioteca `libft` incluye las siguientes funciones (para información mas detallada leer el `header file`, ahí se incluye syntax, descripcion de parametros, notas, y mas información relevante):
+La biblioteca `libft` incluye las siguientes funciones (para información mas detallada leer el `header file`, ahí se incluye syntax, descripción de parametros, notas, y mas información relevante):
 
 ### Funciones complejas
 - `ft_printf()`: Imprime un `string` que incluyendo variables de distintos tipos.
@@ -81,34 +119,20 @@ La biblioteca `libft` incluye las siguientes funciones (para información mas de
 - `ft_strdup()`: Crea una copia de un `string`.
 - `ft_substr()`: Extrae una subcadena de un `string` dada, desde un índice especificado y con una longitud dada.
 - `ft_strjoin()`: Une dos cadenas en un nuevo `string`.
-- `ft_strtrim()`: Crea una nueva `string` eliminando ciertos caracteres del inicio y el final de un `string` dada.
-- `ft_split()`: Divide un `string` en un array de cadenas usando un delimitador.
-- `ft_strmapi()`: Aplica una función a cada carácter de un `string` y almacena los resultados en una nueva `string`.
+- `ft_strtrim()`: Elimina los caracteres definidos en `set` del inicio y el final del `string` `src`, y guarda el resultado en un nuevo `string`.
+- `ft_split()`: Divide un `string` en un `string array` usando como delimitador el `char` `c`.
+- `ft_strmapi()`: Aplica una función a cada carácter de un `string` y almacena los resultados en un nuevo `string`.
 - `ft_striteri()`: Aplica una función a cada carácter de un `string`.
 
 ### Libft Type Checks
 
+- `ft_isalpha()`: Verifica si el carácter dado es una letra en la tabla `ASCII`.
+- `ft_isdigit()`: Verifica si el carácter dado es un dígito en la tabla `ASCII`.
+- `ft_isalnum()`: Verifica si el carácter dado es una letra o un dígito en la tabla `ASCII`.
+- `ft_isascii()`: Verifica si el carácter dado está en la tabla `ASCII`.
+- `ft_isprint()`: Verifica si el carácter dado es imprimible según la tabla `ASCII`.
 
 ### Libft Write FD
-- `ft_putchar_fd()`: Escribe un `carácter` en un descriptor de archivo dado.
+- `ft_putchar_fd()`: Escribe un `char` en un descriptor de archivo dado.
 - `ft_putstr_fd()`: Escribe un `string` en un descriptor de archivo dado.
 - `ft_putendl_fd()`: Escribe un `string` seguida de una nueva línea en un descriptor de archivo dado.
-
-## Uso
-
-Para usar `libft`, simplemente incluye el archivo de encabezado en tu archivo de código fuente:
-
-```c
-#include "libft.h"
-```
-
-Luego, puedes llamar a cualquier función de la biblioteca como lo harías con cualquier otra función de C.
-
-## Compilación
-
-Para compilar `libft`, usa el comando make en la línea de comandos:
-```bash
-make
-```
-
-Esto generará un archivo libft.a que puedes enlazar con tus programas de C.
