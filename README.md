@@ -29,7 +29,7 @@ Hay 3 `header files` adicionales a los previamente descritos que no son una cate
 
 La biblioteca `libft` incluye las siguientes funciones (para información mas detallada leer el `header file`, ahí se incluye syntax, descripcion de parametros, notas, y mas información relevante):
 
-- <p style="color:yellow;">`ft_printf` </p>: Imprime un string que incluyendo variables de distintos tipos
+- <p style="color:yellow;">`ft_printf`: Imprime un string que incluyendo variables de distintos tipos
 - `ft_putchar_fd`: Escribe un carácter en un descriptor de archivo dado.
 - `ft_putstr_fd`: Escribe una cadena en un descriptor de archivo dado.
 - `ft_putendl_fd`: Escribe una cadena seguida de una nueva línea en un descriptor de archivo dado.
