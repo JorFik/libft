@@ -16,7 +16,7 @@ git clone git@github.com:JorFik/libft.git
 ```bash
 git clone https://github.com/JorFik/libft.git
 ```
-### GitHub CLI
+#### GitHub CLI
 ```bash
 gh repo clone JorFik/libft
 ```
