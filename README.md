@@ -25,7 +25,7 @@ Hay 3 `header files` adicionales a los previamente descritos que no son una cate
  - `get_next_line_bonus.h`: `get_next_line()` es una versión con los bonus descritos en el proyecto `get_next_line` de la escuela de codigo 42, de ahí que todos sus archivos relacionados incluyen el sufijo `_bonus`. El igual que con `ft_printf()` al ser una función compleja requiere de su propio `header file`.
  - `libft.h`: Este `header file` es la recopilación de todos los anteriores para poder incluir todas las funciones cómodamente.
 
-<h2 style="color:yellow"> Funciones </h2>
+<h2 style="text-align:center;"> Funciones </h2>
 
 La biblioteca `libft` incluye las siguientes funciones (para información mas detallada leer el `header file`, ahí se incluye syntax, descripcion de parametros, notas, y mas información relevante):
 
