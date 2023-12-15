@@ -1,4 +1,4 @@
-# libft
+# Libft
 
 `libft` es una biblioteca de funciones en C re-escritas de la librería estándar, así como algunas funciones adicionales que pueden ser útiles para los proyectos en C.
 
