@@ -32,7 +32,7 @@ Once inside, create the static library `libft.a` with the following command
 ```bash
 make
 ```
-`libft.a` will be in the root of your project, now you just need to compile your project including `libft.a` and adding the `header files` that contain the functions you want to use, all `header files` are inside `libft/h_files`.
+`libft.a` will be inside `libft/`, now you just need to compile your project including `libft/libft.a` and adding the `header files` that contain the functions you want to use, all `header files` are inside `libft/h_files`.
 
 ### Example of how to include all functions:
 

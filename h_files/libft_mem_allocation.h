@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 15:37:32 by JFikents          #+#    #+#             */
-/*   Updated: 2023/12/14 21:20:07 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/12/15 14:28:58 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,6 @@
  */
 void	*ft_calloc(unsigned long count, unsigned long size);
 
-//_DESCRIPTION
-//? 	CHECKS IF PTR IS NULL AND FREES IT, THEN SETS PTR TO NULL
-//_NOTES
-//*		SAFER TO USE THAN FREE
 /**
 	@note//_DESCRIPTION
 	@brief #### Frees memory and sets pointer to `NULL`

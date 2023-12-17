@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 15:31:51 by JFikents          #+#    #+#             */
-/*   Updated: 2023/12/14 21:58:15 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/12/15 15:01:59 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ char	*ft_strrchr(char *src, int c);
 	@note//_PARAMETERS
 	@param s1 The first string to be compared.
 	@param s2 The second string to be compared.
+	@param n The maximum number of bytes to compare.
 	@note//_RETURNS
 	@return An integer less than, equal to, or greater than zero if `s1` is
 		found, respectively, to be less than, to match, or be greater than `s2`.

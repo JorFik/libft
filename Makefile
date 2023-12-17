@@ -26,13 +26,12 @@ ft_cases.c ft_hex_cases.c ft_cases_bonus.c
 #_EXTRA FUNCTIONS
 ft_so_far += ft_free_n_null.c ft_close.c
 
-.PHONY: clean fclean re all
+.PHONY: clean fclean re all 
 
 all: $(NAME)
 
 $(NAME) : $(OBJ+)
 	@$(LIB) $(NAME) $(OBJ+)
-	@make clean
 
 %.o : %.c
 	@$(CC) $(CFLAGS) -c -o $@ $<
