@@ -1,6 +1,6 @@
 # Libft
 
-Para leer la descripción del proyecto en Español, salte hasta `Libft Español`.
+Para leer la descripción del proyecto en Español, saltese hasta `Libft Español`.
 
 `libft` is a library of C functions rewritten from the standard library, as well as some additional functions that can be useful for C projects.
 
