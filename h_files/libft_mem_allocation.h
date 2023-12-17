@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 15:37:32 by JFikents          #+#    #+#             */
-/*   Updated: 2023/12/15 14:28:58 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/12/17 22:54:40 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	ft_free_n_null(void **ptr);
 	@note//_SEE_ALSO
 	@see `close()`
  */
-int		ft_close(int fd);
+int		ft_close(int *fd);
 
 //_--------------------------------------------------------------------------_//
 
