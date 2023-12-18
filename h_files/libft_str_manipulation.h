@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 15:19:56 by JFikents          #+#    #+#             */
-/*   Updated: 2023/12/14 19:30:30 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/12/16 18:18:44 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,7 +146,7 @@ char			*ft_strjoin(char const *str_1, char const *str_2);
 char			*ft_strtrim(char const *src, char const *set);
 /**
 	@note//_DESCRIPTION
-	@brief # Split a string into an array of strings using a delimiter.
+	@brief ### Split a string into an array of strings using a delimiter.
 	@note//_PARAMETERS
 	@param src The string to be split.
 	@param c The delimiter character.
