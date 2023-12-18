@@ -6,16 +6,17 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 00:42:30 by JFikents          #+#    #+#             */
-/*   Updated: 2023/12/13 23:27:54 by JFikents         ###   ########.fr       */
+/*   Updated: 2023/12/18 01:35:13 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-int	ft_close(int fd)
+int	ft_close(int *fd)
 {
-	if (fd > 0)
-		return (close(fd));
-	return (1);
+	if (fd == 0 || fd == 1 || fd == 2 || fd < 0)
+		return (0);
+	*fd = 0;
+	return (close(fd));
 }
