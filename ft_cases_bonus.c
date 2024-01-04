@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 20:33:48 by JFikents          #+#    #+#             */
-/*   Updated: 2024/01/04 04:07:17 by JFikents         ###   ########.fr       */
+/*   Updated: 2024/01/04 04:17:29 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,12 @@ int	ft_2nd_flags(const char *formato, va_list input)
 		while (ft_strlen(num) < min_width)
 		{
 			if (*formato == '-' && ft_isdigit(formato[1]))
-				*formato = '-';
+				min_width--;
 			if (*formato == '0' && ft_isdigit(formato[1]))
-				*formato = '0';
+				min_width--;
 			if (*formato == '.' && ft_isdigit(formato[1]))
-				*formato = '.';
+				min_width--;
+			min_width--;
 		}
 		free (num);
 	}
