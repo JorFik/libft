@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 15:37:32 by JFikents          #+#    #+#             */
-/*   Updated: 2023/12/18 22:46:17 by JFikents         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:33:42 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,22 @@ void	*ft_calloc(unsigned long count, unsigned long size);
 		previously freed, therefor preventing a double `free()`.
  */
 void	ft_free_n_null(void **ptr);
+
+/**
+	@note//_DESCRIPTION
+	@brief #### Frees a 2D array.
+	@brief Frees the given `array` of size `size`, and sets it to `NULL`.
+	@note//_PARAMETERS
+	@param array The array to free.
+	@param size The size of the array.
+	@note//_NOTES
+	@note If `size` is -1 then it frees the array until it finds a `NULL`.
+	@note The `array` is a triple pointer, so it can be set to `NULL`.
+	@note It uses `ft_free_n_null` to free the array.
+		See `libft/h_files/libft_mem_allocation.h` for more information.
+	@see ft_free_n_null
+ */
+void	ft_free_2d_array(void ***array, int size);
 
 /**
 	@note//_DESCRIPTION
