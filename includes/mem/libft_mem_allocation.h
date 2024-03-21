@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 15:37:32 by JFikents          #+#    #+#             */
-/*   Updated: 2024/02/01 15:33:42 by JFikents         ###   ########.fr       */
+/*   Updated: 2024/03/19 11:53:11 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,26 +72,6 @@ void	ft_free_n_null(void **ptr);
 	@see ft_free_n_null
  */
 void	ft_free_2d_array(void ***array, int size);
-
-/**
-	@note//_DESCRIPTION
-	@brief #### Closes file descriptor
-	@brief Checks if `*fd` is valid and other than `stderr`, `stdin` or `stdout`
-		, if so `close()` it and set `*fd` to `-1` so it can't be closed again.
-	@note//_PARAMETERS
-	@param *fd Pointer to the file descriptor to close
-	@note//_RETURNS
-	@return `0` if `*fd` is valid and `close()` succeeds
-	@return `-1` if `close()` fails
-	@return `1` if `*fd` is negative or `0`
-	@note//_NOTES
-	@note This function is safer to use than `close()` because it checks if the
-		file descriptor is valid and other than the standar file descriptors,
-		before closing it, therefor preventing `Undefined beheavior`.
-	@note//_SEE_ALSO
-	@see `close()`
- */
-int		ft_close(int *fd);
 
 //_--------------------------------------------------------------------------_//
 

@@ -1,32 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_char_manipulation.h                          :+:      :+:    :+:   */
+/*   libft_char_operations.h                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 15:34:46 by JFikents          #+#    #+#             */
-/*   Updated: 2023/12/14 20:07:30 by JFikents         ###   ########.fr       */
+/*   Updated: 2024/03/19 11:59:41 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_CHAR_MANIPULATION_H
-# define LIBFT_CHAR_MANIPULATION_H
+#ifndef LIBFT_CHAR_OPERATIONS_H
+# define LIBFT_CHAR_OPERATIONS_H
 
 // **----------------------------- FUNCTIONS ----------------------------- **//
-
-/**
-	@note//_DESCRIPTION
-	@brief #### TRANSFORMS A CHAR TO UPPERCASE
-	@note//_PARAMETERS
-	@param c Int value of the char to be transformed.
-	@note//_RETURNS
-	@return Returns the int value from the uppercase version of the char.
-	@note//_NOTES
-	@note It will return the same int value if the char is not a
-		lowercase letter.
- */
-int	ft_toupper(int c);
 
 /**
 	@note//_DESCRIPTION
@@ -40,6 +27,19 @@ int	ft_toupper(int c);
 		uppercase letter.
  */
 int	ft_tolower(int c);
+
+/**
+	@note//_DESCRIPTION
+	@brief #### TRANSFORMS A CHAR TO UPPERCASE
+	@note//_PARAMETERS
+	@param c Int value of the char to be transformed.
+	@note//_RETURNS
+	@return Returns the int value from the uppercase version of the char.
+	@note//_NOTES
+	@note It will return the same int value if the char is not a
+		lowercase letter.
+ */
+int	ft_toupper(int c);
 
 //_--------------------------------------------------------------------------_//
 

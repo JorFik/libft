@@ -6,7 +6,7 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 15:31:51 by JFikents          #+#    #+#             */
-/*   Updated: 2023/12/15 15:01:59 by JFikents         ###   ########.fr       */
+/*   Updated: 2024/03/19 17:53:48 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,22 +28,20 @@
 	@note//_WARNINGS
 	@warning Undefined behavior if `src` is NULL.
  */
-char	*ft_strchr(char *src, int c);
+char			*ft_strchr(char *src, int c);
 
-/**
+/** 
 	@note//_DESCRIPTION
-	@brief #### Scan from the end for `c` in `src`.
-	@brief Locates the last occurence of value `c` in the string `src`.
+	@brief Counts the number of characters in a string, up to but not including
+			the terminating null character.
 	@note//_PARAMETERS
-	@param src The string to scan.
-	@param c The value to scan for.
+	@param str The string to be counted.
 	@note//_RETURNS
-	@return The address of the last occurence of `c` in `src`, NULL if `c` is
-		not part of `src`.
-	@note//_WARNINGS
-	@warning Undefined behavior if `src` is NULL.
- */
-char	*ft_strrchr(char *src, int c);
+	@return	LENGTH OF STRING, NOT INCLUDING THE TERMINATING NULL CHARACTER.
+	@note//_NOTES
+	@note	Returns 0 if the string is NULL.
+	*/
+unsigned long	ft_strlen(const char *str);
 
 /**
 	@note//_DESCRIPTION
@@ -61,7 +59,7 @@ char	*ft_strrchr(char *src, int c);
 	@note//_NOTES
 	@note Can handle `NULL` addresses.
  */
-int		ft_strncmp(const char *s1, const char *s2, unsigned long n);
+int				ft_strncmp(const char *s1, const char *s2, unsigned long n);
 
 /**
 	@note//_DESCRIPTION
@@ -81,8 +79,23 @@ int		ft_strncmp(const char *s1, const char *s2, unsigned long n);
 		`haystack`.
 	@warning Make sure `needle` can be read and is `NULL` terminated.
  */
-char	*ft_strnstr(const char *haystack, const char *needle,
-			unsigned long len);
+char			*ft_strnstr(const char *haystack, const char *needle,
+					unsigned long len);
+
+/**
+	@note//_DESCRIPTION
+	@brief #### Scan from the end for `c` in `src`.
+	@brief Locates the last occurence of value `c` in the string `src`.
+	@note//_PARAMETERS
+	@param src The string to scan.
+	@param c The value to scan for.
+	@note//_RETURNS
+	@return The address of the last occurence of `c` in `src`, NULL if `c` is
+		not part of `src`.
+	@note//_WARNINGS
+	@warning Undefined behavior if `src` is NULL.
+ */
+char			*ft_strrchr(char *src, int c);
 
 //_--------------------------------------------------------------------------_//
 

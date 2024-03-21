@@ -6,13 +6,13 @@
 /*   By: JFikents <JFikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 16:13:39 by JFikents          #+#    #+#             */
-/*   Updated: 2023/12/13 23:35:13 by JFikents         ###   ########.fr       */
+/*   Updated: 2024/03/21 15:33:47 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "h_files/libft_str_manipulation.h"
-#include "h_files/libft_str_checks.h"
-#include "h_files/libft_mem_allocation.h"
+#include "libft_str_operations.h"
+#include "libft_str_checks.h"
+#include "libft_mem_allocation.h"
 
 char	*ft_strtrim(char const *src, char const *set)
 {
