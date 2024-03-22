@@ -44,7 +44,7 @@ MEM_OP_SRC = $(addprefix mem_operations/, $(MEM_OP_FILES))
 MEM_SRC = $(addprefix mem/, $(MEM_ALLOC_SRC) $(MEM_CHECK_SRC) $(MEM_OP_SRC))
 
 STR_CHECK_FILES = ft_strchr.c ft_strlen.c ft_strncmp.c ft_strnstr.c\
-	ft_strrchr
+	ft_strrchr.c
 STR_CHECK_SRC = $(addprefix str_checks/, $(STR_CHECK_FILES))
 STR_OP_FILES = ft_atoi.c ft_itoa.c ft_split.c ft_strdup.c ft_striteri.c\
 	ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strmapi.c ft_strtrim.c\
