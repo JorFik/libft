@@ -28,17 +28,17 @@
 # include "libft_fd_operations.h"
 
 //_STRING RELATED
-# include "libft_str_operations.h"
-# include "libft_str_checks.h"
+# include "str/libft_str_operations.h"
+# include "str/libft_str_checks.h"
 
 //_CHARACTER RELATED
-# include "libft_char_operations.h"
-# include "libft_char_checks.h"
+# include "char/libft_char_operations.h"
+# include "char/libft_char_checks.h"
 
 //_MEMORY RELATED
-# include "libft_mem_operations.h"
-# include "libft_mem_checks.h"
-# include "libft_mem_allocation.h"
+# include "mem/libft_mem_operations.h"
+# include "mem/libft_mem_checks.h"
+# include "mem/libft_mem_allocation.h"
 
 //_LIST RELATED
 # include "libft_lst_operations.h"
