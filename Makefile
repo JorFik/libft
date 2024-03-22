@@ -71,16 +71,13 @@ bin/%.o : src/%.c bin
 	@$(CC) $(CFLAGS) $< -o $@
 
 bin/:
-	@mkdir bin
-	@cd bin
-	@mkdir bin/char bin/char/char_checks bin/char/char_operations
+	@mkdir -p bin/char/char_checks bin/char/char_operations
 	@mkdir bin/fd_operations
 	@mkdir bin/ft_printf
 	@mkdir bin/get_next_line
 	@mkdir bin/lst_operations
-	@mkdir bin/mem bin/mem/mem_allocation bin/mem/mem_checks\
-		bin/mem/mem_operations
-	@mkdir bin/str bin/str/str_checks bin/str/str_operations
+	@mkdir -p bin/mem/mem_allocation bin/mem/mem_checks bin/mem/mem_operations
+	@mkdir -p bin/str/str_checks bin/str/str_operations
 
 clean:
 	@$(RM) bin
