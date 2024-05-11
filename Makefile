@@ -67,7 +67,7 @@ all: $(NAME)
 $(NAME) : $(OBJ)
 	@$(LIB) $(NAME) $(OBJ)
 
-bin/%.o : src/%.c bin
+bin/%.o : src/%.c bin/
 	@$(CC) $(CFLAGS) $< -o $@
 
 bin/:
