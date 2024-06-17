@@ -67,10 +67,10 @@ all: $(NAME)
 $(NAME) : $(OBJ)
 	@$(LIB) $(NAME) $(OBJ)
 
-bin/%.o : src/%.c bin/
+bin/%.o : src/%.c | bin
 	@$(CC) $(CFLAGS) $< -o $@
 
-bin/:
+bin:
 	@mkdir -p bin/char/char_checks bin/char/char_operations
 	@mkdir bin/fd_operations
 	@mkdir bin/ft_printf
