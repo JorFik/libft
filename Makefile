@@ -25,7 +25,8 @@ FD_OP_FILES = ft_close.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 	ft_putstr_fd.c
 FD_OP_SRC = $(addprefix fd_operations/, $(FD_OP_FILES))
 
-FT_PRINTF_FILES = ft_cases_bonus.c ft_cases.c ft_hex_cases.c ft_printf.c
+FT_PRINTF_FILES = ft_cases_bonus.c ft_cases.c ft_hex_cases.c ft_printf.c\
+	ft_printf_fd.c
 FT_PRINTF_SRC = $(addprefix ft_printf/, $(FT_PRINTF_FILES))
 
 GNL_FILES = get_next_line_bonus.c get_next_line_utils_bonus.c
