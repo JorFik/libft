@@ -19,7 +19,7 @@ CHAR_CHECK_FILES = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 CHAR_CHECK_SRC = $(addprefix char_checks/, $(CHAR_CHECK_FILES))
 CHAR_OP_FILES = ft_tolower.c ft_toupper.c
 CHAR_OP_SRC = $(addprefix char_operations/, $(CHAR_OP_FILES))
-CHAR_SRC = $(addprefix char/, $(CHAR_MANIP_SRC) $(CHAR_CHECK_SRC))
+CHAR_SRC = $(addprefix char/, $(CHAR_OP_SRC) $(CHAR_CHECK_SRC))
 
 FD_OP_FILES = ft_close.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 	ft_putstr_fd.c
