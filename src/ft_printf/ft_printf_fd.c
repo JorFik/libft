@@ -6,7 +6,7 @@
 /*   By: JFikents <Jfikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 22:29:51 by JFikents          #+#    #+#             */
-/*   Updated: 2024/06/29 16:15:44 by JFikents         ###   ########.fr       */
+/*   Updated: 2024/07/10 11:19:49 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ int	ft_printf_fd(int fd, const char *format, ...)
 		while (format[i] && format[i] != '%' && ++bytes_printed)
 			if (write(fd, &format[i++], 1) == -1 && --print_check == -1)
 				break ;
-		if (format[i++] == '%' && print_check != -1)
+		if (format[i] && format[i++] == '%' && print_check != -1)
 		{
 			print_check = ft_cases_fd(&format[i - 1], input, fd);
 			if (format[i++ - 1] == 'p')
