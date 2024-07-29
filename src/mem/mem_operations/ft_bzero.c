@@ -10,18 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 void	ft_bzero(void *address, unsigned long size)
 {
-	if (size <= 0)
-		return ;
-	else
-	{
-		*(unsigned char *)address = 0;
-		ft_bzero(address + 1, size - 1);
-		return ;
-	}
+	ft_memset(address, 0, size);
 }
 
 // int	main(void)
