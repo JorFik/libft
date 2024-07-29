@@ -3,12 +3,14 @@ RM = rm -rf
 LIB = ar rcs
 CC = cc
 
-HEADERS_DIR = includes/ includes/char includes/mem includes/str ../../includes\
-	# ../../includes ../../includes/char ../../includes/mem ../../includes/str \
-	# ../../../includes ../../../includes/char ../../../includes/mem \
-	# ../../../includes/str
+HEADERS_DIR = includes/ includes/char includes/mem includes/str
 INCLUDES = $(addprefix -I , $(HEADERS_DIR))
 CFLAGS = -Wall -Wextra -Werror -Wunreachable-code -c $(INCLUDES)
+ifeq ($(DEBUG), 1)
+CFLAGS += -g3
+else
+CFLAGS += -O3
+endif
 
 ################################################################################
 #									SORCES									   #
