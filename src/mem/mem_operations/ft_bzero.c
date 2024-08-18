@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_bzero(void *address, unsigned long size)
 {
 	ft_memset(address, 0, size);
