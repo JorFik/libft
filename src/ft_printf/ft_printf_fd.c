@@ -6,7 +6,7 @@
 /*   By: JFikents <Jfikents@student.42Heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 22:29:51 by JFikents          #+#    #+#             */
-/*   Updated: 2024/07/10 11:19:49 by JFikents         ###   ########.fr       */
+/*   Updated: 2024/08/19 10:45:07 by JFikents         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ static int	ft_cases_fd(const char *formato, va_list arg, int fd)
 	int		exit_status;
 	char	*str;
 
+	str = NULL;
 	if (formato[1] == 'c')
 		return (__ft_putchar_fd(fd, va_arg(arg, int)));
 	if (formato[1] == '%')
